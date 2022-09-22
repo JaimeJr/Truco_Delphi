@@ -1,0 +1,101 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 0
+  Top = 0
+  BorderIcons = [biMinimize, biMaximize]
+  BorderStyle = bsNone
+  ClientHeight = 676
+  ClientWidth = 1001
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  WindowState = wsMaximized
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 1001
+    Height = 676
+    Align = alClient
+    BevelOuter = bvNone
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 0
+    ExplicitLeft = 408
+    ExplicitTop = 320
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+    object pnlMenus: TPanel
+      Left = 0
+      Top = 0
+      Width = 209
+      Height = 676
+      Align = alLeft
+      BevelOuter = bvNone
+      Color = clBtnHighlight
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentBackground = False
+      ParentFont = False
+      TabOrder = 0
+      ExplicitHeight = 637
+      object SpeedButton1: TSpeedButton
+        Left = 0
+        Top = 82
+        Width = 209
+        Height = 41
+        Align = alTop
+        Caption = 'Menu'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        ExplicitTop = 0
+      end
+      object SpeedButton2: TSpeedButton
+        Left = 0
+        Top = 41
+        Width = 209
+        Height = 41
+        Align = alTop
+        Caption = 'Menu'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        ExplicitTop = 8
+      end
+      object SpeedButton3: TSpeedButton
+        Left = 0
+        Top = 0
+        Width = 209
+        Height = 41
+        Align = alTop
+        Caption = 'Menu'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        ExplicitTop = 8
+      end
+    end
+  end
+end
