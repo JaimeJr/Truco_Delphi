@@ -109,6 +109,7 @@
         <DCCReference Include="Classes\uIMao.pas"/>
         <DCCReference Include="Classes\uIJogo.pas"/>
         <DCCReference Include="Classes\uIJogador.pas"/>
+        <DCCReference Include="Classes\uITime.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

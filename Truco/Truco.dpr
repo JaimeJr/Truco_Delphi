@@ -9,7 +9,8 @@ uses
   uIMesa in 'Classes\uIMesa.pas',
   uIMao in 'Classes\uIMao.pas',
   uIJogo in 'Classes\uIJogo.pas',
-  uIJogador in 'Classes\uIJogador.pas';
+  uIJogador in 'Classes\uIJogador.pas',
+  uITime in 'Classes\uITime.pas';
 
 {$R *.res}
 
