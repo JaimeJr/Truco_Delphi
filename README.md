@@ -1,8 +1,8 @@
 # Truco_Delphi 
 Jogo de Truco feito de Delphi 10.4 para testar os princípios SOLID.
 
-Realizado:
- ♣ Interfaces;
+Realizado: 
+ Interfaces;
  
 Realizando:
- ♣ Classes;
+  Classes;
