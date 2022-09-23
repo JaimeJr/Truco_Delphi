@@ -99,9 +99,16 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="frmPrincipal.pas">
-            <Form>Form1</Form>
+            <Form>frmTelaPrincipal</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Classes\uICartas.pas"/>
+        <DCCReference Include="Biblioteca\Tipos.pas"/>
+        <DCCReference Include="Classes\uIBaralho.pas"/>
+        <DCCReference Include="Classes\uIMesa.pas"/>
+        <DCCReference Include="Classes\uIMao.pas"/>
+        <DCCReference Include="Classes\uIJogo.pas"/>
+        <DCCReference Include="Classes\uIJogador.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

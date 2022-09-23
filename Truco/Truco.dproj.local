@@ -1,9 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2022/09/22 20:20:21.715,=C:\Users\jaime\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/09/22 20:20:55.806,C:\Users\jaime\Documents\_Delphi\Truco\frmPrincipal.pas=C:\Users\jaime\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/09/22 20:20:55.806,C:\Users\jaime\Documents\_Delphi\Truco\frmPrincipal.dfm=C:\Users\jaime\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2022/09/22 20:21:00.812,C:\Users\jaime\Documents\_Delphi\Truco\Truco.dproj=C:\Users\jaime\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+	<Transactions>
+    <Transaction>2022/09/22 20:20:21.000.715,=C:\Users\jaime\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/22 20:20:55.000.806,C:\Users\jaime\Documents\_Delphi\Truco\frmPrincipal.dfm=C:\Users\jaime\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/09/22 20:20:55.000.806,C:\Users\jaime\Documents\_Delphi\Truco\frmPrincipal.pas=C:\Users\jaime\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/22 20:21:00.000.812,C:\Users\jaime\Documents\_Delphi\Truco\Truco.dproj=C:\Users\jaime\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/09/22 20:40:29.000.600,=C:\Users\jaime\Documents\_Delphi\Truco\Unit1.pas</Transaction>
+    <Transaction>2022/09/22 20:40:50.000.177,C:\Users\jaime\Documents\_Delphi\Truco\Classes\iCartas.pas=C:\Users\jaime\Documents\_Delphi\Truco\Unit1.pas</Transaction>
+    <Transaction>2022/09/22 20:41:28.000.344,C:\Users\jaime\Documents\_Delphi\Truco\Classes\uICartas.pas=C:\Users\jaime\Documents\_Delphi\Truco\Classes\iCartas.pas</Transaction>
+    <Transaction>2022/09/22 20:46:47.000.922,=C:\Users\jaime\Documents\_Delphi\Truco\Unit1.pas</Transaction>
+    <Transaction>2022/09/22 20:47:39.000.700,C:\Users\jaime\Documents\_Delphi\Truco\Biblioteca\Tipos.pas=C:\Users\jaime\Documents\_Delphi\Truco\Unit1.pas</Transaction>
+    <Transaction>2022/09/22 21:00:58.000.182,=C:\Users\jaime\Documents\_Delphi\Truco\Unit1.pas</Transaction>
+    <Transaction>2022/09/22 21:01:06.000.723,C:\Users\jaime\Documents\_Delphi\Truco\Unit1.pas=C:\Users\jaime\Documents\_Delphi\Truco\Classes\uIBaralho.pas</Transaction>
+    <Transaction>2022/09/22 21:08:40.000.957,=C:\Users\jaime\Documents\_Delphi\Truco\Unit1.pas</Transaction>
+    <Transaction>2022/09/22 21:09:05.000.480,=C:\Users\jaime\Documents\_Delphi\Truco\Unit1.pas</Transaction>
+    <Transaction>2022/09/22 21:09:24.000.003,C:\Users\jaime\Documents\_Delphi\Truco\Unit1.pas=C:\Users\jaime\Documents\_Delphi\Truco\Classes\uIMesa.pas</Transaction>
+    <Transaction>2022/09/22 21:09:54.000.712,=C:\Users\jaime\Documents\_Delphi\Truco\Unit1.pas</Transaction>
+    <Transaction>2022/09/22 21:10:00.000.153,C:\Users\jaime\Documents\_Delphi\Truco\Unit1.pas=C:\Users\jaime\Documents\_Delphi\Truco\Classes\IMao.pas</Transaction>
+    <Transaction>2022/09/22 21:12:13.000.498,C:\Users\jaime\Documents\_Delphi\Truco\Classes\IMao.pas=C:\Users\jaime\Documents\_Delphi\Truco\Classes\yIMao.pas</Transaction>
+    <Transaction>2022/09/22 21:12:24.000.232,C:\Users\jaime\Documents\_Delphi\Truco\Classes\yIMao.pas=C:\Users\jaime\Documents\_Delphi\Truco\Classes\uIMao.pas</Transaction>
+    <Transaction>2022/09/22 21:13:12.000.739,C:\Users\jaime\Documents\_Delphi\Truco\Classes\uIMao.pas=</Transaction>
+    <Transaction>2022/09/22 21:13:20.000.665,=C:\Users\jaime\Documents\_Delphi\Truco\Unit1.pas</Transaction>
+    <Transaction>2022/09/22 21:13:35.000.049,C:\Users\jaime\Documents\_Delphi\Truco\Unit1.pas=C:\Users\jaime\Documents\_Delphi\Truco\Classes\uIMao.pas</Transaction>
+    <Transaction>2022/09/22 21:15:22.000.102,=C:\Users\jaime\Documents\_Delphi\Truco\Unit1.pas</Transaction>
+    <Transaction>2022/09/22 21:15:30.000.291,=C:\Users\jaime\Documents\_Delphi\Truco\Unit1.pas</Transaction>
+    <Transaction>2022/09/22 21:15:48.000.321,C:\Users\jaime\Documents\_Delphi\Truco\Unit1.pas=C:\Users\jaime\Documents\_Delphi\Truco\Classes\uIJogo.pas</Transaction>
+    <Transaction>2022/09/22 21:25:09.234,=C:\Users\jaime\Documents\_Delphi\Truco\Unit1.pas</Transaction>
+    <Transaction>2022/09/22 21:25:17.009,C:\Users\jaime\Documents\_Delphi\Truco\Classes\uIJogador.pas=C:\Users\jaime\Documents\_Delphi\Truco\Unit1.pas</Transaction>
   </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Biblioteca"/>
+    <File Path="Biblioteca\Tipos.pas"/>
+    <File Path="Classes"/>
+    <File Path="Classes\uICartas.pas"/>
+    <File Path="Classes\uIBaralho.pas"/>
+    <File Path="Classes\uIMesa.pas"/>
+    <File Path="Classes\uIMao.pas"/>
+    <File Path="Classes\uIJogo.pas"/>
+    <File Path="Classes\uIJogador.pas"/>
+    <File Path="frmPrincipal.pas"/>
+    <File Path="frmPrincipal.dfm"/>
+  </ProjectSortOrder>
 </BorlandProject>

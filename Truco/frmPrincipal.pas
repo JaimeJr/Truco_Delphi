@@ -11,6 +11,10 @@ type
     pnlFundo: TPanel;
     pnlCabecalho: TPanel;
     pnlRodape: TPanel;
+    pnlCartaExemplo: TPanel;
+    pnlRodCarta: TPanel;
+    pnlCabCarta: TPanel;
+    pnlCartaNaipe: TPanel;
   private
     { Private declarations }
   public
