@@ -2,14 +2,24 @@ unit uIJogo;
 
 interface
 uses
-  uICartas, uIBaralho, uIMao, uIMesa, uIJogador, uITime, System.Generics.Collections;
+  uIBaralho, uITime, uIRodada, System.Generics.Collections;
 
   type IJogo = interface
     ['{6B9A67CC-EE6B-4658-A75F-5B6F54EA9D86}']
-    function GetMaos : TList<IMao>;
-    procedure SetMaos(maos: TList<IMao>);
+    procedure ComecarRodada(novaRodada : IRodada);
+    procedure VerificarVencedor;
 
-    property Maos: TList<IMao> read GetMaos write SetMaos;
+    procedure SetTimes(Value : TList<ITime>);
+    procedure SetRodadaAtual(Value : IRodada);
+    procedure SetBaralhoJogo(Value : IBaralho);
+
+    function GetTimes : TList<ITime>;
+    function GetRodadaAtual : IRodada;
+    function GetBaralhoJogo : IBaralho;
+
+    property Times       : TList<ITime> read GetTimes       write SetTimes;
+    property RodadaAtual : IRodada      read GetRodadaAtual write SetRodadaAtual;
+    property BaralhoJogo : IBaralho     read GetBaralhoJogo write SetBaralhoJogo;
   end;
 implementation
 
