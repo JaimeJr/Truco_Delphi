@@ -5,4 +5,5 @@ Realizado:
  Interfaces;
  
 Realizando:
-  Classes;
+  Classes; 
+  Testes Unitários.
