@@ -6,6 +6,7 @@
 *.user
 *.userosscache
 *.sln.docstates
+*.dcu
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -21,6 +22,7 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+[Ww]in32/
 __[Hh]istory/
 __[Rr]ecovery/
 

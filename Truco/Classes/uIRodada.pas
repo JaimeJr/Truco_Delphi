@@ -1,7 +1,7 @@
 unit uIRodada;
 
 interface
-  uses uICartas, uIBaralho, uIJogador, Tipos, System.Generics.Collections;
+  uses uICarta, uIBaralho, uIJogador, Tipos, System.Generics.Collections;
 
   type IRodada = interface
   ['{0D232DF4-22D8-4DC4-B1FC-6AE718C96DC3}']

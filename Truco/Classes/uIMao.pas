@@ -2,7 +2,7 @@ unit uIMao;
 
 interface
 uses
-  uICartas, System.Generics.Collections;
+  uICarta, System.Generics.Collections;
 
   type IMao = interface
   ['{F1EABBF8-F424-47E6-87CD-CD8770A9B343}']

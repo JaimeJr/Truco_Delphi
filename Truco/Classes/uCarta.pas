@@ -1,10 +1,10 @@
-unit uCartas;
+unit uCarta;
 
 interface
  uses
-   uICartas, Tipos;
+   uICarta, Tipos;
 
-  type TCartas = class(TInterfacedObject, ICarta)
+  type TCarta = class(TInterfacedObject, ICarta)
 
   private
     FValor : tpValorCarta;
@@ -17,10 +17,9 @@ interface
     function GetNaipe : tpNaipeCarta;
 
     function VerificarCartaManilha(cartaManilha : ICarta) : Boolean;
-  protected
-    constructor Create(valor : tpValorCarta ; naipe : tpNaipeCarta);  
 
-  public                                                
+  public
+    constructor Create(valor : tpValorCarta ; naipe : tpNaipeCarta);
     property ValorCarta: tpValorCarta read GetValor write SetValor;
     property NaipeCarta: tpNaipeCarta read GetNaipe write SetNaipe; 
     function CompararCartas(segundaCarta : ICarta; cartaManilha : ICarta) : tpResultadoComparacao; 
@@ -31,19 +30,12 @@ implementation
 
 { TCartas }
 
-/// <summary>
-///   Compara a carta atual com outra e retorna se é maior, igual ou menor.
-/// </summary>
-/// <param name="segundaCarta">
-///   Carta que sera comparada com a carta atual
-/// </param>
-/// <param name="cartaManilha">
-///   Carta manilha da rodada.
-/// </param>
-function TCartas.CompararCartas(segundaCarta: ICarta; cartaManilha : ICarta): tpResultadoComparacao;
+function TCarta.CompararCartas(segundaCarta: ICarta; cartaManilha : ICarta): tpResultadoComparacao;
 var
   valorTemp1,
   valorTemp2 : tpValorCarta;
+
+  jogouManilha : Boolean;
 
   function CompararNaipes : tpResultadoComparacao;
   begin
@@ -59,7 +51,9 @@ begin
   valorTemp1 := FValor;
   valorTemp2 := segundaCarta.ValorCarta;
   
-  Result := rcIgual;  
+  Result := rcIgual;
+
+  jogouManilha := Self.VerificarCartaManilha(cartaManilha) or segundaCarta.VerificarCartaManilha(cartaManilha);
  
   if Self.VerificarCartaManilha(cartaManilha) then
     FValor := vcManilha;   
@@ -69,48 +63,46 @@ begin
   
   if Self.FValor > segundaCarta.ValorCarta then
     Result := rcMaior
-  else if Self.FValor < Self.FValor then
+  else if Self.FValor < segundaCarta.ValorCarta then
     Result := rcMenor;
 
   FValor := valorTemp1;
-  segundaCarta.ValorCarta := valorTemp2;     
-    
-  if Result <> rcIgual then
-    Exit;                              
+  segundaCarta.ValorCarta := valorTemp2;
 
-  Result := CompararNaipes;    
+  if (Result = rcIgual) and jogouManilha then
+    Result := CompararNaipes;  
 end;
 
-constructor TCartas.Create(valor : tpValorCarta;
+constructor TCarta.Create(valor : tpValorCarta;
                            naipe : tpNaipeCarta);
 begin
   ValorCarta := valor;
   NaipeCarta := naipe;
 end;
 
-function TCartas.GetNaipe: tpNaipeCarta;
+function TCarta.GetNaipe: tpNaipeCarta;
 begin
   Result := FNaipe;
 end;
 
-function TCartas.GetValor: tpValorCarta;
+function TCarta.GetValor: tpValorCarta;
 begin
   Result := FValor;
 end;
 
-procedure TCartas.SetNaipe(Value: tpNaipeCarta);
+procedure TCarta.SetNaipe(Value: tpNaipeCarta);
 begin
-
+  FNaipe := Value;
 end;
 
-procedure TCartas.SetValor(Value: tpValorCarta);
+procedure TCarta.SetValor(Value: tpValorCarta);
 begin
-
+  FValor := Value;
 end;
 
-function TCartas.VerificarCartaManilha(cartaManilha: ICarta): Boolean;
+function TCarta.VerificarCartaManilha(cartaManilha: ICarta): Boolean;
 begin
-
+  Result := Self.FValor = cartaManilha.ValorCarta;
 end;
 
 end.

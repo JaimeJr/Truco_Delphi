@@ -1,7 +1,7 @@
 unit Tipos;
 
 interface
-  type tpNaipeCarta = ( ncOuros, ncEspada, ncCopas, ncPaus);
+  type tpNaipeCarta = (ncOuros, ncEspada, ncCopas, ncPaus);
 
   type tpValorCarta = (vcQuatro, vcCinco, vcSeis, vcSete, vcDama, vcValete, vcReis, vcAs, vcDois, vcTres, vcManilha);
 
@@ -10,6 +10,8 @@ interface
   type tpDistruibuirCarta = (dcCorrido, dcPicado);
 
   type tpResultadoComparacao = (rcMaior, rcIgual, rcMenor);
+
+  type tpSentidoCorte = (pcDescendo, pcSubindo);
 
 implementation
 

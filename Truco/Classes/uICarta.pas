@@ -1,4 +1,4 @@
-unit uICartas;
+unit uICarta;
 
 interface
 
@@ -31,7 +31,6 @@ uses
     property Figura  : TImage     read GetFigura write SetFigura;
     property Figuras : TImageList read GetFiguras  write SetFiguras ;
   end;
-
   implementation
 
 

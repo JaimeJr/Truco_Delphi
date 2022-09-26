@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/09/25 20:41:54.000.247,=C:\Users\jaime\Documents\_Delphi\Truco\Test\TestuCartas.pas</Transaction>
+    <Transaction>2022/09/25 20:41:54.000.396,=C:\Users\jaime\Documents\_Delphi\Truco\Classes\uCartas.pas</Transaction>
+    <Transaction>2022/09/25 20:42:36.000.342,=C:\Users\jaime\Documents\_Delphi\Truco\Biblioteca\Tipos.pas</Transaction>
+    <Transaction>2022/09/25 20:43:13.000.076,=C:\Users\jaime\Documents\_Delphi\Truco\Classes\uICartas.pas</Transaction>
+    <Transaction>2022/09/25 20:47:25.211,C:\Users\jaime\Documents\_Delphi\Truco\Classes\uICarta.pas=C:\Users\jaime\Documents\_Delphi\Truco\Classes\uICartas.pas</Transaction>
+    <Transaction>2022/09/25 20:48:20.151,=C:\Users\jaime\Documents\_Delphi\Truco\Classes\uCarta.pas</Transaction>
+  </Transactions>
+</BorlandProject>
