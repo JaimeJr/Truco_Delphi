@@ -38,21 +38,21 @@
     <Transaction>2022/09/25 18:51:10.000.880,C:\Users\jaime\Documents\_Delphi\Truco\Unit1.pas=C:\Users\jaime\Documents\_Delphi\Truco\Classes\uBaralho.pas</Transaction>
     <Transaction>2022/09/25 19:02:04.000.949,=C:\Users\jaime\Documents\_Delphi\Truco\Unit1.pas</Transaction>
     <Transaction>2022/09/25 19:02:15.000.614,C:\Users\jaime\Documents\_Delphi\Truco\Unit1.pas=C:\Users\jaime\Documents\_Delphi\Truco\Biblioteca\Exceptions.pas</Transaction>
+    <Transaction>2022/09/25 20:47:25.000.224,C:\Users\jaime\Documents\_Delphi\Truco\Classes\uICartas.pas=C:\Users\jaime\Documents\_Delphi\Truco\Classes\uICarta.pas</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="Biblioteca"/>
-    <File Path="Biblioteca\Tipos.pas"/>
     <File Path="Biblioteca\Exceptions.pas"/>
+    <File Path="Biblioteca\Tipos.pas"/>
     <File Path="Classes"/>
-    <File Path="Classes\uICartas.pas"/>
-    <File Path="Classes\uIBaralho.pas"/>
-    <File Path="Classes\uIMao.pas"/>
-    <File Path="Classes\uIJogo.pas"/>
-    <File Path="Classes\uIJogador.pas"/>
-    <File Path="Classes\uITime.pas"/>
-    <File Path="Classes\uIRodada.pas"/>
-    <File Path="Classes\uCartas.pas"/>
     <File Path="Classes\uBaralho.pas"/>
+    <File Path="Classes\uIBaralho.pas"/>
+    <File Path="Classes\uICarta.pas"/>
+    <File Path="Classes\uIJogador.pas"/>
+    <File Path="Classes\uIJogo.pas"/>
+    <File Path="Classes\uIMao.pas"/>
+    <File Path="Classes\uIRodada.pas"/>
+    <File Path="Classes\uITime.pas"/>
     <File Path="frmPrincipal.pas"/>
     <File Path="frmPrincipal.dfm"/>
   </ProjectSortOrder>

@@ -102,13 +102,12 @@
             <Form>frmTelaPrincipal</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="Classes\uICartas.pas"/>
+        <DCCReference Include="Classes\uICarta.pas"/>
         <DCCReference Include="Classes\uIMao.pas"/>
         <DCCReference Include="Classes\uIJogo.pas"/>
         <DCCReference Include="Classes\uIJogador.pas"/>
         <DCCReference Include="Classes\uITime.pas"/>
         <DCCReference Include="Classes\uIRodada.pas"/>
-        <DCCReference Include="Classes\uCartas.pas"/>
         <DCCReference Include="Biblioteca\Exceptions.pas"/>
         <DCCReference Include="Biblioteca\Tipos.pas"/>
         <DCCReference Include="Classes\uBaralho.pas"/>

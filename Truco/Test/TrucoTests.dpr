@@ -17,10 +17,12 @@ program TrucoTests;
 uses
   DUnitTestRunner,
   TestuCartas in 'TestuCartas.pas',
-  uCartas in '..\Classes\uCartas.pas',
   Tipos in '..\Biblioteca\Tipos.pas',
   uICarta in '..\Classes\uICarta.pas',
-  uCarta in '..\Classes\uCarta.pas';
+  uCarta in '..\Classes\uCarta.pas',
+  TestuBaralho in 'TestuBaralho.pas',
+  uBaralho in '..\Classes\uBaralho.pas',
+  Exceptions in '..\Biblioteca\Exceptions.pas';
 
 {$R *.RES}
 

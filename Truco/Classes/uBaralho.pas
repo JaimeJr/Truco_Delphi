@@ -6,81 +6,80 @@ interface
   type TBaralho = class(TInterfacedObject, IBaralho)
   private
     FCartasBaralho : TList<ICarta>;
+    FCartasBaralhoCortado : TList<ICarta>;
     FSentidoCorte : tpSentidoCorte;
 
-    function GetSentidoCorte: tpSentidoCorte;
-
-    procedure SetSentidoCorte(Value : tpSentidoCorte);
-    procedure ValidarClasse;
-  protected
-    constructor Create;
+    procedure CriarNovoBaralho;
   public
+    constructor Create;
+
     procedure EmbaralharCartas;
     procedure AdicionarCarta(carta : ICarta);
+    procedure CortarBaralho(posicaoCorte: integer; sentidoCorte: tpSentidoCorte; cartasNecessarias : integer);
 
-    function CortarBaralho(posicaoCorte: integer; sentidoCorte: tpSentidoCorte; cartasNecessarias : integer): TList<ICarta>;
     function RetirarCarta : ICarta;
+    function SentidoCorte(Value : tpSentidoCorte) : IBaralho; overload;
+    function SentidoCorte : tpSentidoCorte; overload;
 
-    property SentidoCorte: tpSentidoCorte read GetSentidoCorte write SetSentidoCorte;
+    function QuantidadeCartas : integer; overload;
   end;
+
 implementation
 
 { TBaralho }
 
 procedure TBaralho.AdicionarCarta(carta: ICarta);
 begin
-  try
-    ValidarClasse;
-    if FCartasBaralho.Contains(carta) then
-      raise ECartaRepetidaException.Create('Carta já adicionado ao baralho');
-    
-    FCartasBaralho.Add(carta);
-  except
-    raise;
-  end;
+  if FCartasBaralho.Contains(carta) then
+    raise ECartaRepetidaException.Create('Carta já adicionado ao baralho');
+
+  FCartasBaralho.Add(carta);
 end;
 
-function TBaralho.CortarBaralho(posicaoCorte: integer; sentidoCorte: tpSentidoCorte; cartasNecessarias : integer): TList<ICarta>;
+procedure TBaralho.CortarBaralho(posicaoCorte: integer; sentidoCorte: tpSentidoCorte; cartasNecessarias : integer);
 var
   baralhoCorte : TList<ICarta>;
 begin
   baralhoCorte := TList<ICarta>.Create;
 
   if baralhoCorte.Count < cartasNecessarias then
-    raise ECartasInsuficientes.Create('Não há cartas suficientes para a rodada');
+    raise ECartasInsuficientesException.Create('Não há cartas suficientes para a rodada');
   
-  Result := baralhoCorte;
+  FCartasBaralhoCortado := baralhoCorte;
 end;
 
 constructor TBaralho.Create;
-var
-  i, j, k : integer;
-  novaCarta : ICarta;
-  valoresCarta : array of tpValorCarta;
-  naipesCarta : array of tpNaipeCarta;
 begin
   FCartasBaralho := TList<ICarta>.Create;
-  
+  CriarNovoBaralho;
+end;
+
+procedure TBaralho.CriarNovoBaralho;
+var
+  j, k : integer;
+  novaCarta : ICarta;
+  naipesCarta : array of tpNaipeCarta;
+  valoresCarta : array of tpValorCarta;
+begin
   naipesCarta := [ncOuros, ncEspada, ncCopas, ncPaus];
   valoresCarta := [vcQuatro, vcCinco, vcSeis, vcSete, vcDama, vcValete, vcReis, vcAs, vcDois, vcTres, vcManilha];
 
-  for i := 0 to 43 do
-    for j := 0 to 3 do
-      for k := 0 to 11 do
-      begin    
-        novaCarta := TCarta.Create(vcCinco, ncOuros);
-        novaCarta.ValorCarta := valoresCarta[k];
-        novaCarta.NaipeCarta := naipesCarta[j]; 
-        try        
-          AdicionarCarta(novaCarta);
-        except 
-          on E : ECartaRepetidaException do         
-            Continue;
-            
-          on E : Exception do
-            raise;
-        end;                  
-      end; 
+  for j := 0 to 3 do
+    for k := 0 to 10 do
+    begin
+      novaCarta := TCarta.Create(vcCinco, ncOuros);
+      novaCarta.ValorCarta(valoresCarta[k]);
+      novaCarta.NaipeCarta(naipesCarta[j]);
+      try
+        AdicionarCarta(novaCarta);
+      except
+        on E : ECartaRepetidaException do
+          Continue;
+
+        on E : Exception do
+          raise;
+      end;
+    end;
 
   EmbaralharCartas;
 end;
@@ -94,10 +93,13 @@ var
 begin
   try
     novoBaralho := TList<ICarta>.Create;
-    tempBaralho := FCartasBaralho;
+    tempBaralho := TList<ICarta>.Create;
+
+    for carta in FCartasBaralho do
+      tempBaralho.Add(Carta);
 
     repeat
-      indexCarta := Random(tempBaralho.Count);
+      indexCarta := Random(FCartasBaralho.Count - 1);
 
       carta := FCartasBaralho.Items[indexCarta];
 
@@ -115,28 +117,35 @@ begin
   end;
 end;
 
-function TBaralho.GetSentidoCorte: tpSentidoCorte;
+function TBaralho.QuantidadeCartas: integer;
 begin
-  Result := FSentidoCorte;
+  Result := FCartasBaralho.Count;
 end;
 
 function TBaralho.RetirarCarta : ICarta;
+var
+  posRetirar : Integer;
 begin
   case FSentidoCorte of
-    pcDescendo: ;
-    pcSubindo: ;
+    pcDescendo: posRetirar := 0;
+    pcSubindo:  posRetirar := FCartasBaralho.Count - 1;
+  else
+    raise ESentidoCorteNaoDevidoException.Create('Sentido do corte não foi devido. Atribuir valor para SentidoCorte');
   end;
+
+  Result := FCartasBaralhoCortado.Items[posRetirar];
+  FCartasBaralho.Remove(Result);
 end;
 
-procedure TBaralho.SetSentidoCorte(Value: tpSentidoCorte);
+function TBaralho.SentidoCorte(Value: tpSentidoCorte): IBaralho;
 begin
+  Result := Self;
   FSentidoCorte := Value;
 end;
 
-procedure TBaralho.ValidarClasse;
+function TBaralho.SentidoCorte: tpSentidoCorte;
 begin
-  if not Assigned(Self) then
-    raise EBaralhoException.Create('A classe não foi construida. Rodar o Create().');
+  Result := FSentidoCorte;
 end;
 
 end.

@@ -8,7 +8,8 @@ uses SysUtils;
   type EBaralhoException = class(ETrucoException);
   type EBaralhoVazioException = class(EBaralhoException);
   type ECartaRepetidaException = class(EBaralhoException);
-  type ECartasInsuficientes = class(EBaralhoException);
+  type ECartasInsuficientesException = class(EBaralhoException);
+  type ESentidoCorteNaoDevidoException = class(EBaralhoException);
 
 implementation
 

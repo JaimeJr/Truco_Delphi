@@ -8,13 +8,12 @@ uses
     ['{F74FDC72-6C2C-4FEE-9CF2-7D2510467FC6}']
     procedure EmbaralharCartas;
     procedure AdicionarCarta(carta : ICarta);
-    procedure SetSentidoCorte(Value : tpSentidoCorte);
+    procedure CortarBaralho(posicaoCorte: integer; sentidoCorte: tpSentidoCorte; cartasNecessarias : integer);
 
     function RetirarCarta : ICarta;
-    function GetSentidoCorte : tpSentidoCorte;
-    function CortarBaralho(posicaoCorte: integer; sentidoCorte: tpSentidoCorte; cartasNecessarias : integer): TList<ICarta>;
 
-    property SentidoCorte: tpSentidoCorte read GetSentidoCorte write SetSentidoCorte;
+    function SentidoCorte(Value : tpSentidoCorte) : IBaralho; overload;
+    function SentidoCorte : tpSentidoCorte; overload;
   end;
 implementation
 

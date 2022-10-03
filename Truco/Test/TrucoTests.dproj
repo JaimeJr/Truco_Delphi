@@ -84,10 +84,12 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="TestuCartas.pas"/>
-        <DCCReference Include="..\Classes\uCartas.pas"/>
         <DCCReference Include="..\Biblioteca\Tipos.pas"/>
         <DCCReference Include="..\Classes\uICarta.pas"/>
         <DCCReference Include="..\Classes\uCarta.pas"/>
+        <DCCReference Include="TestuBaralho.pas"/>
+        <DCCReference Include="..\Classes\uBaralho.pas"/>
+        <DCCReference Include="..\Biblioteca\Exceptions.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
